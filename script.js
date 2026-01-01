@@ -314,20 +314,20 @@ const App = {
 
         let html = '';
 
-        // Секция Пиццы
+        // Секция Пицца - 3 в строке
         if (pizzas.length > 0) {
             html += '<div class="menu-category">';
-            html += '<h3 class="menu-category__title">Пицца</h3>';
+            html += '<h2 class="menu-category__title">🍕 Пицца</h2>';
             html += '<div class="menu-category__grid">';
             html += pizzas.map(item => this.createMenuItemHTML(item)).join('');
             html += '</div>';
             html += '</div>';
         }
 
-        // Секция Напитки
+        // Секция Напитки - 3 в строке
         if (drinks.length > 0) {
             html += '<div class="menu-category">';
-            html += '<h3 class="menu-category__title">Напитки</h3>';
+            html += '<h2 class="menu-category__title">🥤 Напитки</h2>';
             html += '<div class="menu-category__grid">';
             html += drinks.map(item => this.createMenuItemHTML(item)).join('');
             html += '</div>';
@@ -354,7 +354,7 @@ const App = {
             <div class="menu-card">
                 <div class="menu-card__image-wrapper">
                     <img src="${item.image}" alt="${item.name}" class="menu-card__image" 
-                         onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop';">
+                         onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop'">
                     ${discount > 0 ? `<div class="menu-card__discount-badge">-${discount}%</div>` : ''}
                 </div>
                 <div class="menu-card__content">
@@ -365,8 +365,12 @@ const App = {
                         <span>Б: ${item.proteins}г Ж: ${item.fats}г У: ${item.carbs}г</span>
                     </div>
                     <div class="menu-card__price">
-                        ${discount > 0 ? `<span class="menu-card__old-price">${item.price}₽</span>` : ''}
-                        <span class="menu-card__new-price">${finalPrice}₽</span>
+                        ${discount > 0 ? `
+                            <span class="menu-card__old-price">${item.price}₽</span>
+                            <span class="menu-card__new-price">${finalPrice}₽</span>
+                        ` : `
+                            <span class="menu-card__new-price">${item.price}₽</span>
+                        `}
                     </div>
                     <button class="menu-card__button" data-id="${item.id}">В корзину</button>
                 </div>
@@ -628,7 +632,7 @@ const App = {
             return `
                 <div class="cart-item">
                     <img src="${item.image}" alt="${item.name}" class="cart-item__image"
-                         onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=100&h=100&fit=crop';">
+                         onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=100&h=100&fit=crop'">
                     <div class="cart-item__info">
                         <div class="cart-item__name">
                             ${item.name}
