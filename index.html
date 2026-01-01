@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SLICE & GO - премиальная пиццерия с доставкой. Закажите вкусную пиццу на дом или в офис. Широкий ассортимент, акции и быстрая доставка.">
+    <meta name="keywords" content="пиццерия, доставка пиццы, заказать пиццу, пицца на дом, пицца в офис, премиальная пицца, быстрая доставка, горячая пицца">
+    <title>SLICE & GO - Премиальная Пиццерия с Доставкой</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1 class="header__title">SLICE & GO</h1>
+                    <p class="header__subtitle">Premium Pizza</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link nav__link--active" data-view="home">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#menu" class="nav__link" data-view="menu">Меню</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#promotions" class="nav__link" data-view="promotions">Акции</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#delivery" class="nav__link" data-view="delivery">Доставка</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" data-view="contact">Обратная связь</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__cart">
+                    <button class="cart-button" id="cartButton">
+                        <span class="cart-button__icon">🛒</span>
+                        <span class="cart-button__count" id="cartCount">0</span>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home View -->
+        <section id="home" class="view view--active">
+            <div class="hero">
+                <div class="hero__content">
+                    <h2 class="hero__title">Добро пожаловать в SLICE & GO</h2>
+                    <p class="hero__subtitle">Премиальная пицца с доставкой прямо к вашему столу</p>
+                    <button class="hero__button" data-view="menu">Заказать сейчас</button>
+                </div>
+                <div class="hero__pizza">
+                    <div class="pizza-float">🍕</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu View -->
+        <section id="menu" class="view">
+            <div class="container">
+                <h2 class="view__title">Наше Меню</h2>
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Menu items will be inserted here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions View -->
+        <section id="promotions" class="view">
+            <div class="container">
+                <h2 class="view__title">Акции и Спецпредложения</h2>
+                <div class="promotions-grid">
+                    <div class="promotion-card">
+                        <div class="promotion-card__badge">ХИТ</div>
+                        <h3 class="promotion-card__title">Комбо на двоих</h3>
+                        <p class="promotion-card__description">2 средние пиццы + напиток. Скидка 25%</p>
+                        <div class="promotion-card__price">
+                            <span class="promotion-card__old-price">1290₽</span>
+                            <span class="promotion-card__new-price">970₽</span>
+                        </div>
+                        <button class="promotion-card__button">Заказать</button>
+                    </div>
+                    <div class="promotion-card">
+                        <div class="promotion-card__badge">НОВИНКА</div>
+                        <h3 class="promotion-card__title">Пицца дня</h3>
+                        <p class="promotion-card__description">Каждый день новая пицца со скидкой 30%</p>
+                        <div class="promotion-card__price">
+                            <span class="promotion-card__new-price">от 490₽</span>
+                        </div>
+                        <button class="promotion-card__button">Заказать</button>
+                    </div>
+                    <div class="promotion-card">
+                        <div class="promotion-card__badge">СПЕЦ</div>
+                        <h3 class="promotion-card__title">Бесплатная доставка</h3>
+                        <p class="promotion-card__description">При заказе от 1000₽ доставка бесплатно</p>
+                        <div class="promotion-card__price">
+                            <span class="promotion-card__new-price">0₽</span>
+                        </div>
+                        <button class="promotion-card__button">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery View -->
+        <section id="delivery" class="view">
+            <div class="container">
+                <h2 class="view__title">Доставка</h2>
+                <div class="delivery-content">
+                    <div class="delivery-info">
+                        <div class="delivery-info__item">
+                            <h3 class="delivery-info__title">📍 Адрес ресторана</h3>
+                            <p class="delivery-info__text delivery-info__address">
+                                г. Ростов-на-Дону,<br>
+                                Братский переулок, д. 44
+                            </p>
+                        </div>
+                        <div class="delivery-info__item">
+                            <h3 class="delivery-info__title">⏱ Время доставки</h3>
+                            <p class="delivery-info__text">30-60 минут в зависимости от загрузки</p>
+                        </div>
+                        <div class="delivery-info__item">
+                            <h3 class="delivery-info__title">📍 Зоны доставки</h3>
+                            <p class="delivery-info__text">Доставляем по всему городу в радиусе 15 км</p>
+                        </div>
+                        <div class="delivery-info__item">
+                            <h3 class="delivery-info__title">💰 Стоимость</h3>
+                            <p class="delivery-info__text">200₽ - стандартная доставка. Бесплатно при заказе от 1000₽</p>
+                        </div>
+                        <div class="delivery-info__item">
+                            <h3 class="delivery-info__title">💳 Оплата</h3>
+                            <p class="delivery-info__text">Наличными курьеру или картой онлайн</p>
+                        </div>
+                    </div>
+                    <div class="delivery-map">
+                        <div id="map" class="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact View -->
+        <section id="contact" class="view">
+            <div class="container">
+                <h2 class="view__title">Обратная связь</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="contact-form__group">
+                        <label for="name" class="contact-form__label">Имя *</label>
+                        <input type="text" id="name" name="name" class="contact-form__input" required>
+                        <span class="contact-form__error"></span>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="email" class="contact-form__label">Email *</label>
+                        <input type="email" id="email" name="email" class="contact-form__input" required>
+                        <span class="contact-form__error"></span>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="phone" class="contact-form__label">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" class="contact-form__input" required>
+                        <span class="contact-form__error"></span>
+                    </div>
+                    <div class="contact-form__group">
+                        <label for="message" class="contact-form__label">Сообщение *</label>
+                        <textarea id="message" name="message" class="contact-form__textarea" rows="5" required></textarea>
+                        <span class="contact-form__error"></span>
+                    </div>
+                    <button type="submit" class="contact-form__submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">SLICE & GO</h3>
+                    <p class="footer__subtitle">Premium Pizza</p>
+                    <p class="footer__description">Премиальная пиццерия с доставкой по всему городу</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__heading">Контакты</h4>
+                    <div class="footer__contact">
+                        <p class="footer__contact-item">
+                            <span class="footer__icon">📍</span>
+                            г. Ростов-на-Дону,<br>Братский переулок, д. 44
+                        </p>
+                        <p class="footer__contact-item">
+                            <span class="footer__icon">📞</span>
+                            <a href="tel:+78631234567" class="footer__link">+7 (863) 123-45-67</a>
+                        </p>
+                        <p class="footer__contact-item">
+                            <span class="footer__icon">✉️</span>
+                            <a href="mailto:info@sliceandgo.ru" class="footer__link">info@sliceandgo.ru</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__heading">Режим работы</h4>
+                    <div class="footer__schedule">
+                        <p class="footer__schedule-item">Пн - Вс: 10:00 - 23:00</p>
+                        <p class="footer__schedule-item">Без выходных</p>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__heading">Навигация</h4>
+                    <nav class="footer__nav">
+                        <a href="#home" class="footer__nav-link" data-view="home">Главная</a>
+                        <a href="#menu" class="footer__nav-link" data-view="menu">Меню</a>
+                        <a href="#promotions" class="footer__nav-link" data-view="promotions">Акции</a>
+                        <a href="#delivery" class="footer__nav-link" data-view="delivery">Доставка</a>
+                        <a href="#contact" class="footer__nav-link" data-view="contact">Обратная связь</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 SLICE & GO. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar__header">
+            <h2 class="cart-sidebar__title">Корзина</h2>
+            <button class="cart-sidebar__close" id="cartClose">×</button>
+        </div>
+        <div class="cart-sidebar__content" id="cartContent">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-sidebar__footer">
+            <div class="cart-sidebar__total">
+                <span class="cart-sidebar__total-label">Итого:</span>
+                <span class="cart-sidebar__total-price" id="cartTotal">0₽</span>
+            </div>
+            <button class="cart-sidebar__checkout" id="checkoutButton">Оформить заказ</button>
+        </div>
+    </aside>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
+</body>
+</html>
