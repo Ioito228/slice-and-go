@@ -209,7 +209,7 @@ const App = {
             id: 9,
             name: 'Кола',
             price: 150,
-            description: 'Кока-кола 0.5л',
+            description: ' Rich кола 0.5л',
             calories: 210,
             proteins: 0,
             fats: 0,
@@ -221,7 +221,7 @@ const App = {
             id: 10,
             name: 'Спрайт',
             price: 150,
-            description: 'Спрайт 0.5л',
+            description: 'Добрый лимон-лайм 0.5л',
             calories: 190,
             proteins: 0,
             fats: 0,
@@ -233,7 +233,7 @@ const App = {
             id: 11,
             name: 'Фанта',
             price: 150,
-            description: 'Фанта 0.5л',
+            description: 'Добрый апельсин  0.5л',
             calories: 200,
             proteins: 0,
             fats: 0,
@@ -245,7 +245,7 @@ const App = {
             id: 12,
             name: 'Сок апельсиновый',
             price: 180,
-            description: 'Апельсиновый сок 0.5л',
+            description: 'Сок RICH апельсин 0.5л',
             calories: 220,
             proteins: 2,
             fats: 0,
@@ -257,7 +257,7 @@ const App = {
             id: 13,
             name: 'Сок яблочный',
             price: 180,
-            description: 'Яблочный сок 0.5л',
+            description: 'Сок RICH яблоко 0.5л',
             calories: 210,
             proteins: 0,
             fats: 0,
@@ -907,3 +907,4 @@ const App = {
 document.addEventListener('DOMContentLoaded', () => {
     App.init();
 });
+
