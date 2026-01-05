@@ -209,7 +209,7 @@ const App = {
             id: 9,
             name: 'Кола',
             price: 150,
-            description: ' Rich кола 0.5л',
+            description: 'Rich кола 0.5л',
             calories: 210,
             proteins: 0,
             fats: 0,
@@ -907,4 +907,5 @@ const App = {
 document.addEventListener('DOMContentLoaded', () => {
     App.init();
 });
+
 
